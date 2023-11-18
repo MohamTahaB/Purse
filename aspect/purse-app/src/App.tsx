@@ -1,6 +1,13 @@
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { NavBar } from "./components/NavBar";
+
 function App() {
   return (
-    <p>whats up you little bitches</p>
+    <>
+      <NavBar/>
+      <Button variant="primary">Primary</Button>{" "}
+    </>
   );
 }
 
