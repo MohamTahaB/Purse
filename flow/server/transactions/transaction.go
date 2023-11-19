@@ -4,14 +4,14 @@ import "time"
 
 // Define the transaction type.
 type Transaction struct {
-	Id          string
-	DisplayName string
+	Id          string `json:"id"`
+	DisplayName string `json:"displayName"`
 }
 
 // Define the transaction info type.
 type TransactionInfo struct {
-	Id     string
-	Amount float64
-	Date   time.Time
-	UserID string
+	Id     string    `json:"id"`
+	Amount float64   `json:"amount"`
+	Date   time.Time `json:"date"`
+	UserID string    `json:"userId"`
 }
