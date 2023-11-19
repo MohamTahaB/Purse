@@ -15,3 +15,8 @@ type TransactionInfo struct {
 	Date   time.Time `json:"date"`
 	UserID string    `json:"userId"`
 }
+
+type RawTransaction struct {
+	Transaction     *Transaction     `json:"transaction"`
+	TransactionInfo *TransactionInfo `json:"transactionInfo"`
+}

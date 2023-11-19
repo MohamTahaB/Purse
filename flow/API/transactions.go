@@ -19,9 +19,10 @@ func GetTransactionInfoFromTransaction(c *gin.Context) {
 		end--
 	}
 	id = id[start:end]
-	transaction, transactionInfoMap := &transactions.Transaction{
+
+	transaction := &transactions.Transaction{
 		Id: id,
-	}, TransactionInfoMap()
+	}
 	transactionInfoRes, err := transaction.FetchTransactionInfoFromTransaction(transactionInfoMap)
 	if err != nil {
 		c.String(http.StatusNotFound, err.Error())
